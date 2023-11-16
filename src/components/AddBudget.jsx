@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function AddBudget() {
   return (
-    <div>AddBudget</div>
+    <div>
+        <input type="number" name="" id="" />
+        <button>Ajouter budget</button>
+    </div>
   )
 }

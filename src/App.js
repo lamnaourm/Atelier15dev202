@@ -10,11 +10,13 @@ function App() {
     <div className="container">
       <Header />
       <StatsDepenses />
-      <div>
-        <AddBudget />
-        <AddDepense />
+      <div className='content'>
+        <div>
+          <AddBudget />
+          <AddDepense />
+        </div>
+        <ListDepense />
       </div>
-      <ListDepense />
     </div>
   );
 }

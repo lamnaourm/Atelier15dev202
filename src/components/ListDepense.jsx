@@ -1,6 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 export default function ListDepense() {
+
+  const depenses = useSelector(state => state.depenses)
+
   return (
     <div className='list'>
         <table>
@@ -10,6 +14,14 @@ export default function ListDepense() {
                     <th>Montant</th>
                 </tr>
             </thead>
+            <tbody>
+              {depenses.map(d => 
+                <tr key={d.id}>
+                  <td>{d.titre}</td>
+                  <td>{d.montant}</td>
+                </tr>
+                )}
+            </tbody>
         </table>
     </div>
   )
